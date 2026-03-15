@@ -1,0 +1,55 @@
+
+     Program DOS v.7.4.1 starts on  9Nov2025 at 18:38: 3 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on     8 processors
+
+     MPI processes distributed on     1 nodes
+     K-points division:     npool     =       4
+     R & G space division:  proc/nbgrp/npool/nimage =       2
+     10403 MiB available memory on the printing compute node when the environment starts
+
+
+     Reading xml data from directory:
+
+     ./outputs/capd2as2.save/
+     file Ca.pbe-spn-kjpaw_psl.1.0.0.UPF: wavefunction(s)  3S renormalized
+     file Pd.pbe-spn-kjpaw_psl.1.0.0.UPF: wavefunction(s)  4S 5S 4D renormalized
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min        2483    1234    394                71748    25323    4642
+     Max        2484    1235    395                71749    25324    4643
+     Sum        4967    2469    789               143497    50647    9285
+
+     Using Slab Decomposition
+
+
+     Optimized tetrahedron method used
+
+     [opt_tetra]  Optimized tetrahedron method is used.
+
+     DOS          :   2m56.57s CPU   2m57.02s WALL
+
+
+   This run was terminated on:  18:41: 0   9Nov2025            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=
