@@ -1,0 +1,54 @@
+### Self Consistent F (primitive cell, scalar-relativistic)
+
+&CONTROL
+  calculation   = 'scf',
+  prefix        = 'capd2as2',
+  outdir        = './tmp',
+  pseudo_dir    = './pseudopotential',
+  verbosity     = 'high',
+  wf_collect = .true.,
+/
+&SYSTEM
+  ibrav         = 0,
+  nat           = 5,          ! primitive cell: 1 Ca + 2 Pd + 2 As
+  ntyp          = 3,
+  ecutwfc       = 70,
+  ecutrho       = 560,
+  occupations   = 'smearing',
+  smearing      = 'mv',
+  degauss       = 0.01,
+
+  ! ---- SPEED (no SOC) ----
+  noncolin      = .false.,
+  lspinorb      = .false.,
+
+  ! If you later want SOC, flip the two above to .true. and use FR PPs.
+  ! nbnd can be set here (e.g. 100) if needed for DOS; not required for SCF.
+/
+&ELECTRONS
+  conv_thr      = 1.0d-8
+  mixing_beta   = 0.3
+/
+
+ATOMIC_SPECIES
+Ca  40.078   Ca.pbe-spn-kjpaw_psl.1.0.0.UPF
+Pd  106.42   Pd.pbe-spn-kjpaw_psl.1.0.0.UPF
+As  74.922   As.pbe-n-kjpaw_psl.1.0.0.UPF
+
+! ========= PASTE FROM SEEK-PATH (primitive) =========
+! Use the primitive lattice (Å) you got from SeeK-path.
+CELL_PARAMETERS angstrom
+   -2.1548951900     2.1548951900     5.1133625150
+    2.1548951900    -2.1548951900     5.1133625150
+    2.1548951900     2.1548951900    -5.1133625150 
+
+! Use the primitive atomic positions(fractional) from SeeK-path.
+ATOMIC_POSITIONS crystal
+As      0.3797473200	0.3797473200	0.0000000000
+As	0.6202526800	0.6202526800	1.0000000000
+Ca	0.0000000000	0.0000000000	0.0000000000
+Pd	0.7500000000	0.2500000000	0.5000000000
+Pd	0.2500000000	0.7500000000	0.5000000000
+
+K_POINTS automatic
+18 18 16  1 1 1     ! densify if needed: 20x20x16 for DOS
