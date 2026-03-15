@@ -1,7 +1,7 @@
 ### bands.in: CaPd2As2 Band Structure (PRIMITIVE 5-atom cell)
 &CONTROL
     calculation = 'bands',
-    prefix      = 'capd2as2',     ! MUST match the prefix from your 5-atom scf.in
+    prefix      = 'capd2as2',     ! MUST match the prefix from 5-atom scf.in
     outdir      = './tmp',
     pseudo_dir  = './pseudopotential', 
     verbosity   = 'high',
@@ -10,8 +10,8 @@
     ibrav       = 0,
     nat         = 5,
     ntyp        = 3,
-    ecutwfc     = 70,                           ! Should match your scf.in
-    ecutrho     = 560,                          ! Should match your scf.in
+    ecutwfc     = 70,                           ! Should match scf.in
+    ecutrho     = 560,                          ! Should match scf.in
     occupations = 'fixed'
     smearing    = 'mv'
     degauss     = 0.01
@@ -33,7 +33,7 @@ CELL_PARAMETERS angstrom
     2.1548951900    -2.1548951900     5.1133625150
     2.1548951900     2.1548951900    -5.1133625150
  
-! Positions MUST be identical to your 5-atom scf.in
+! Positions MUST be identical to 5-atom scf.in
 ATOMIC_POSITIONS crystal
 As	0.3797473200	0.3797473200	0.0000000000
 As	0.6202526800	0.6202526800	1.0000000000
@@ -41,7 +41,7 @@ Ca	0.0000000000	0.0000000000	0.0000000000
 Pd	0.7500000000	0.2500000000	0.5000000000
 Pd	0.2500000000	0.7500000000	0.5000000000
 
-! This is the high-symmetry k-path (Γ → X → M → Γ → Z → R → A → Z)
+! Considering the high-symmetry k-path (Γ → X → M → Γ → Z → R → A → Z) from Seek-Path
 ! Using 80 points per segment for good resolution
 K_POINTS crystal_b
 8
