@@ -1,0 +1,46 @@
+! =============================================================
+!  Non-Self Consistent Function Calculation for CaPd2As2 :
+! =============================================================
+
+! &CONTROL namelist: Manages the overall calculation
+&CONTROL
+  calculation  = 'nscf'                 ! Specifies an SCF calculation
+  prefix       = 'capd2as2'               ! A unique name for output files
+  outdir       = './outputs'              ! Directory for temporary files
+  pseudo_dir   = './pseudopotentials'     ! Directory where pseudopotentials are stored
+  verbosity = 'high'
+/
+
+! &SYSTEM namelist: Describes the physical properties of the crystal
+&SYSTEM
+  ibrav       = 0                        ! Bravais lattice
+  nat         = 5                        ! Number of atoms in the primitive unit cell
+  ntyp        = 3                        ! Number of types of atoms (just Si)
+  ecutwfc     = 70                       ! Plane-wave kinetic energy cutoff in Rydberg
+  ecutrho     = 560
+  occupations = 'tetrahedra_opt'
+  degauss = 0.02,
+  nbnd        =  80
+/
+&ELECTRONS
+  diagonalization = 'cg'
+  conv_thr    = 1.0e-8
+/
+CELL_PARAMETERS angstrom
+   -2.1548951900     2.1548951900     5.1133625150
+    2.1548951900    -2.1548951900     5.1133625150
+    2.1548951900     2.1548951900    -5.1133625150
+
+ATOMIC_SPECIES
+  As  74.922  As.pbe-n-kjpaw_psl.1.0.0.UPF
+  Ca  40.078  Ca.pbe-spn-kjpaw_psl.1.0.0.UPF
+  Pd  106.42  Pd.pbe-spn-kjpaw_psl.1.0.0.UPF
+ATOMIC_POSITIONS crystal
+As	0.3797473200	0.3797473200	0.0000000000
+As	0.6202526800	0.6202526800	1.0000000000
+Ca	0.0000000000	0.0000000000	0.0000000000
+Pd	0.7500000000	0.2500000000	0.5000000000
+Pd	0.2500000000	0.7500000000	0.5000000000
+
+K_POINTS {automatic}
+  24 24 12 0 0 0   ! <-- CHANGED (much denser grid)

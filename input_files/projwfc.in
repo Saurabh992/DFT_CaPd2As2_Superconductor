@@ -1,0 +1,8 @@
+&PROJWFC
+    prefix   = 'capd2as2'
+    outdir   = './outputs'
+    filproj  = './outputs/capd2as2.pdos'  ! <-- This will be the prefix
+    Emin     = -20.0
+    Emax     = 25.0
+    DeltaE   = 0.01
+/

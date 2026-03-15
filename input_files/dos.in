@@ -1,0 +1,8 @@
+&DOS
+  prefix = 'capd2as2'
+  outdir = './outputs'
+  fildos = './outputs/dos.dat'
+  Emin = -20.0,
+  Emax = 25.0,
+  DeltaE = 0.01
+/

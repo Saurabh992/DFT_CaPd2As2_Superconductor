@@ -1,0 +1,6 @@
+&BANDS
+  prefix   = 'capd2as2',                   ! must match your scf/bands runs
+  outdir   = './outputs',                      ! must match your scf/bands runs
+  filband  = 'outputs/bands.dat',                   ! output file you will plot
+  lsym     = .true.              ! prints symmetry labels to bands.x stdout
+/
