@@ -1,4 +1,4 @@
-### Self Consistent F (primitive cell, scalar-relativistic)
+### Self Consistent (primitive cell, scalar-relativistic)
 
 &CONTROL
   calculation   = 'scf',
@@ -22,7 +22,7 @@
   noncolin      = .false.,
   lspinorb      = .false.,
 
-  ! If you later want SOC, flip the two above to .true. and use FR PPs.
+  ! If we later want SOC, we must flip the two above to .true. and use FR PPs.
   ! nbnd can be set here (e.g. 100) if needed for DOS; not required for SCF.
 /
 &ELECTRONS
@@ -35,8 +35,6 @@ Ca  40.078   Ca.pbe-spn-kjpaw_psl.1.0.0.UPF
 Pd  106.42   Pd.pbe-spn-kjpaw_psl.1.0.0.UPF
 As  74.922   As.pbe-n-kjpaw_psl.1.0.0.UPF
 
-! ========= PASTE FROM SEEK-PATH (primitive) =========
-! Use the primitive lattice (Å) you got from SeeK-path.
 CELL_PARAMETERS angstrom
    -2.1548951900     2.1548951900     5.1133625150
     2.1548951900    -2.1548951900     5.1133625150
