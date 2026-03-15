@@ -1,6 +1,0 @@
-&BANDS
-  prefix   = 'capd2as2',                   ! must match scf/bands
-  outdir   = './tmp',                      ! must match scf/bands
-  filband  = 'tmp/bands.dat',                   ! output file
-  lsym     = .true.              ! prints symmetry labels to bands.x stdout
-/
