@@ -11,7 +11,9 @@ Results:
 • Analysis of electronic properties
 
 Tools:
-Quantum ESPRESSO
-Python
-NumPy
-Matplotlib
+• Quantum ESPRESSO
+• Python
+• NumPy
+• Matplotlib
+• VESTA
+• Xcrysden
